@@ -1,0 +1,5 @@
+{
+    "name": "kivi",
+    "script": "index.js",
+    "watch": true
+}
