@@ -15,4 +15,5 @@ app.use(require("./app/middleware/router.js"));
 
 
 app.listen(config.port);
+
 console.log('服务启动，监听端口:', config.port);
