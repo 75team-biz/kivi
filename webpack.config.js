@@ -2,11 +2,11 @@ var extractTextWebpackPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        css: "./src/js/css-compile.js",
+        styles: "./src/js/css-compile.js",
         main: "./src/js/index.js"
     },
     output: {
-        filename: "./static/js/[name].js"
+        filename: "./www/static/js/[name].js"
     },
     module: {
         loaders: [
@@ -26,7 +26,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new extractTextWebpackPlugin("./static/css/[name].css")
+        new extractTextWebpackPlugin("./www/static/css/[name].css")
     ],
     babel: {
         presets: ['es2015'],

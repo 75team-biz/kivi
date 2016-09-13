@@ -1,25 +1,27 @@
 {
-  "name": "coda",
-  "version": "0.0.1",
-  "description": "gaonan's test project",
+  "name": "kivi",
+  "version": "0.0.2",
+  "description": "a scaffold for SPA",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack"
+    "start": "./node_modules/.bin/webpack; ./node_modules/.bin/pm2 startOrRestart pm2.json",
+    "watch": "./node_modules/.bin/webpack --watch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NangeGao/kivi.git"
+    "url": "https://github.com/75team-biz/kivi.git"
   },
-  "author": "gaonan",
+  "author": "NangeGao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NangeGao/kivi/issues"
+    "url": "https://github.com/75team-biz/kivi/issues"
   },
-  "homepage": "https://github.com/NangeGao/kivi",
+  "homepage": "https://github.com/75team-biz/kivi",
   "dependencies": {
     "koa": "^1.1.2",
     "koa-jade": "^2.1.0",
     "koa-static": "^2.0.0",
+    "pm2": "^1.1.3",
     "vue": "^1.0.17",
     "vue-router": "^0.7.11"
   },

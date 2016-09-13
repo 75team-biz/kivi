@@ -1,16 +1,19 @@
 var fs = require("fs");
 var controllerCache = {};
-var ignorePath = /^(home|blog)$/i;
+var ignorePath = config.routerAlias;
 
 module.exports = function* (next){
     var pathArray = this.request.path.split("/");
     var controllerName = (pathArray[1] || "index").toLowerCase();
     var actionName = (pathArray[2] || "index").toLowerCase();
 
-    if(ignorePath.test(controllerName)){
-        controllerName = "index";
-        actionName = "index";
-    }
+    Object.keys(ignorePath).find(function(key) {
+        if (new RegExp(key, 'i').test(controllerName)) {
+            controllerName = ignorePath[key];
+            return true;
+        }
+    });
+
     var action = getAction(controllerName, actionName);
     if(action){
         yield* action.call(this, next);

@@ -1,5 +1,9 @@
 {
     "name": "kivi",
     "script": "index.js",
-    "watch": true
+    "watch": ["app"],
+    "ignore_watch": ["static", "README.md"],
+    "env": {
+        "PORT": 8888
+    }
 }
