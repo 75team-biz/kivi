@@ -27,5 +27,8 @@ router.map({
         component: AboutView
     }
 });
-router.redirect({ });
+
+router.redirect({
+    '/': '/home'
+});
 router.start(MainView, "#wrapper");
