@@ -1,0 +1,77 @@
+@import '../base/variables.css';
+@import '../base/common.css';
+
+/* 表单
+ * ===========================================================================
+ */
+.form {
+    @apply --clearfix;
+    & .item {
+        width: 100%;
+        margin-bottom: 0.84em;
+        line-height: 2.5;
+        @apply --clearfix;
+    }
+    & .label {
+        display: block;
+        float: left;
+        padding-right: .5em;
+        color: #666;
+        line-height: 3;
+        min-height: 10px;
+        min-width: 80px;
+        text-align: right;
+        & .required {
+            font-weight: bold;
+            color: #f00;
+        }
+        &.right {
+            min-width: 7em;
+            text-align: right;
+        }
+    }
+    & .control {
+        line-height: 3;
+        min-height: 10px;
+        padding-bottom: 1px;
+        & .tips {
+            font-size: 12px;
+            color: #999;
+        }
+    }
+    & .note {
+        background: #ffffcc;
+        border: 1px solid #ffdd9a;
+        padding: 5px 15px;
+    }
+    & .links {
+        line-height: 1.5;
+    }
+    & .input-date {
+        width: 80px;
+    }
+    & a:not(.btn) {
+        color: var(--link-color);
+        &:hover {
+            color: var(--hover-link-color);
+        }
+    }
+    & em {
+        padding-left: 10px;
+    }
+}
+
+/* inline form */
+.form-inline {
+    margin: 1em 0;
+    & .item {
+        float: left;
+        margin-right: 2em;
+        margin-bottom: 0.83em;
+        width: auto;
+        & .label, & .control {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}

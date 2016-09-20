@@ -1,1 +1,1 @@
-import '../css/index.css'
+import '../css/yoyo.css'

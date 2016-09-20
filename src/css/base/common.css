@@ -1,0 +1,97 @@
+@import './variables.css';
+
+* {
+    box-sizing: inherit;
+}
+body {
+    min-width: var(--min-window-width);
+    font: normal normal 12px/1.6 var(--text-font);
+    background: var(--paper-color);
+    box-sizing: border-box;
+}
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 14px;
+}
+p {
+    margin-bottom: 10px;
+}
+em {
+    color: var(--yellow-color);
+}
+button {
+    border: none;
+}
+
+:root {
+    /* * 清除浮动 */
+    --clearfix: {
+        &:before, &:after {
+            content:"";
+            display:table;
+            line-height: 0;
+        }
+        &:after {
+            clear: both;
+        }
+    };
+    /* * 水平居中 */
+    --center-block: {
+        margin-left: auto;
+        margin-right: auto;
+    };
+    /* * 垂直居中 */
+    --v-center: {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+    };
+    /* * 水平居中 */
+    --h-center: {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+    };
+    /* * 垂直水平居中 */
+    --hv-center: {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    };
+    /* 三角形 */
+    --triangle: {
+        width: 0;
+        height: 0;
+        border-style: solid;
+    };
+}
+
+/* * 上三角 */
+up-triangle: $color $width $height {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $width $height $width;
+    border-color: transparent transparent $color transparent;
+}
+
+/* * 下三角 */
+down-triangle: $color $width $height {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $width $height 0 $height;
+    border-color: $color transparent transparent transparent;
+}
