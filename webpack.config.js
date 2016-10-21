@@ -1,3 +1,4 @@
+var path = require("path");
 var extractTextWebpackPlugin = require("extract-text-webpack-plugin");
 //以下为postcss插件
 var cssnext = require('postcss-cssnext');
@@ -7,13 +8,19 @@ var cssimport = require('postcss-import');
 var cssnano = require('cssnano');
 var perfectionist = require('perfectionist');
 
+console.log('--------------------------------------------------------------');
+console.log(process.cwd());
+console.log('--------------------------------------------------------------');
+
 module.exports = {
+    devtool: "source-map",
     entry: {
         styles: "./src/js/css-compile.js",
         main: "./src/js/index.js"
     },
     output: {
-        filename: "./www/static/js/[name].js"
+        path: path.resolve(process.cwd(), "www/static/"),
+        filename: "./js/[name].js"
     },
     module: {
         loaders: [
@@ -43,10 +50,15 @@ module.exports = {
         ];
     },
     plugins: [
-        new extractTextWebpackPlugin("./www/static/css/[name].css")
+        new extractTextWebpackPlugin("./css/[name].css")
     ],
     babel: {
         presets: ['es2015'],
         plugins: ['transform-runtime']
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.js'
+        }
     }
 }

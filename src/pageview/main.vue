@@ -22,13 +22,13 @@
         </div>
         <ul class="nav">
             <li>
-                <a v-link.literal="/home">Home</a>
+                <router-link to="/home">Home</router-link>
             </li>
             <li>
-                <a v-link.literal="/blog">Blog</a>
+                <router-link to="/blog">Blog</router-link>
             </li>
             <li>
-                <a v-link.literal="/about">About</a>
+                <router-link to="/about">About</router-link>
             </li>
         </ul>
     </header>
