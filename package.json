@@ -7,7 +7,7 @@
     "start": "./node_modules/.bin/webpack; ./node_modules/.bin/pm2 startOrRestart pm2.json",
     "build": "./node_modules/.bin/webpack",
     "watch": "./node_modules/.bin/webpack --watch",
-    "test" : "exit 0"
+    "test" : "echo 'no test' && exit 0"
   },
   "repository": {
     "type": "git",
