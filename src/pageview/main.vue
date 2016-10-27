@@ -2,7 +2,7 @@
 <div>
     <header class="header">
         <h1 class="logo">
-            <a href="/">website</a>
+            <router-link to="/">website</router-link>
         </h1>
         <div id="login_info">
             <div class="signed">
@@ -33,7 +33,9 @@
         </ul>
     </header>
 
-    <router-view></router-view>
+    <transition name="component-fade">
+        <router-view></router-view>
+    </transition>
 </div>
 </template>
 

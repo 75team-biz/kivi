@@ -18,6 +18,7 @@ const routes = [
         {
             path: '/',
             component: MainView,
+            redirect: '/home',
             children: [{
                 path: '/home',
                 component: HomeView
@@ -47,28 +48,3 @@ const app = new Vue({
     router
 }).$mount('#wrapper');
 
-/***
-var router = new Router({
-    history: true,
-    linkActiveClass: 'active'
-});
-router.map({
-    '/home':{
-        component: HomeView
-    },
-    '/blog':{
-        component: BlogView,
-    },
-    '/blog/add': {
-        component: AddView
-    },
-    '/about':{
-        component: AboutView
-    }
-});
-
-router.redirect({
-    '/': '/home'
-});
-router.start(MainView, "#wrapper");
-*/
