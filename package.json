@@ -7,21 +7,21 @@
     "start": "./node_modules/.bin/webpack; ./node_modules/.bin/pm2 startOrRestart pm2.json",
     "build": "./node_modules/.bin/webpack",
     "watch": "./node_modules/.bin/webpack --watch",
-    "test" : "echo 'no test' && exit 0"
+    "test": "echo '[TODO] no test' && exit 0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/75team-biz/kivi.git"
   },
   "author": "NangeGao",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/75team-biz/kivi/issues"
   },
   "homepage": "https://github.com/75team-biz/kivi",
   "dependencies": {
     "koa": "^1.1.2",
-    "koa-jade": "^2.1.0",
+    "koa-pug": "^3.0.0-1",
     "koa-static": "^2.0.0",
     "pm2": "^2.0.16",
     "vue": "^2.0.2",

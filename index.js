@@ -12,7 +12,7 @@ var app = koa();
 //加载中间件
 var middlewares = [
     'static',    //静态资源
-    'koa-jade',  //jade模版
+    'render',    //渲染模版
     'router'     //单页路由
 ];
 for (md in middlewares) {
