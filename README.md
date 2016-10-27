@@ -3,6 +3,7 @@
 一个单页面应用的脚手架：后端用[koa](https://github.com/koajs/koa)，前端用[vue.js](https://github.com/vuejs/vue)，页面样式采用[yoyo.css](https://zhouweicsu.github.io/yoyo/)。
 
 [![Build Status](https://travis-ci.org/75team-biz/kivi.svg?branch=master)](https://travis-ci.org/75team-biz/kivi)
+[![Dependency](https://david-dm.org/75team-biz/kivi.svg)]()
 
 
 ## 如何使用
