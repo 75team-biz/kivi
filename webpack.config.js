@@ -2,15 +2,8 @@ var path = require("path");
 var extractTextWebpackPlugin = require("extract-text-webpack-plugin");
 //以下为postcss插件
 var cssnext = require('postcss-cssnext');
-var mixins = require('postcss-mixins');
 var defineproperty = require('postcss-define-property');
 var cssimport = require('postcss-import');
-var cssnano = require('cssnano');
-var perfectionist = require('perfectionist');
-
-console.log('--------------------------------------------------------------');
-console.log(process.cwd());
-console.log('--------------------------------------------------------------');
 
 module.exports = {
     devtool: "source-map",
@@ -42,11 +35,8 @@ module.exports = {
     postcss: function () {
         return [
             cssimport,
-            mixins,
             defineproperty,
-            cssnext,
-            cssnano,
-            perfectionist
+            cssnext
         ];
     },
     plugins: [

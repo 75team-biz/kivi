@@ -8,7 +8,6 @@ require("babel-polyfill");
 //全局配置
 global.config          = require('./app/config/config');
 global.middleware_path = `${__dirname}/app/middleware`;
-global.controller_path = `${__dirname}/app/controller`;
 global.VIEW_PATH       = `${__dirname}/app/view`;
 
 //引入koa
