@@ -3,7 +3,7 @@ const pug = new Pug({
     viewPath: VIEW_PATH
 });
 
-module.exports = function* (next){
-    pug.use(this.app);
-    yield next;
+module.exports = async function(ctx, next){
+    pug.use(ctx.app);
+    await next();
 };

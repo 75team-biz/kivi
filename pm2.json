@@ -1,7 +1,7 @@
 {
     "name": "kivi",
     "script": "index.js",
-    "watch": ["app"],
+    "watch": ["app", "index.js"],
     "ignore_watch": ["static", "README.md"],
     "env": {
         "PORT": 8888

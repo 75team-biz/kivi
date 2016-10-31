@@ -1,10 +1,9 @@
-var serve = require("koa-static");
+const serve = require("koa-send");
 
-module.exports = function* (next){
-    console.log(this.request.path);
-    if(/^\/static\//.test(this.request.path)){
-        yield serve('./www');
+module.exports = async (ctx, next) => {
+    if(/^\/static\//.test(ctx.path)){
+        await serve(ctx, ctx.path, {root: './www'});
     } else {
-        yield next;
+        await next();
     }
 };
