@@ -13,12 +13,10 @@
         float: left;
         margin-right: 50px;
         & a {
-            background: url(/static/img/yoyocss-resize-logo-white.png) no-repeat left center;
             background-size: auto 40px;
             display: block;
             width: 200px;
             height: 50px;
-            text-indent: -1000%;
             overflow: hidden;
         }
     }
